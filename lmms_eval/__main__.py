@@ -360,6 +360,8 @@ def cli_evaluate(args: Union[argparse.Namespace, None] = None) -> None:
     if args.wandb_args:
         wandb_logger.run.finish()
 
+    return results_list
+
 
 def cli_evaluate_single(args: Union[argparse.Namespace, None] = None) -> None:
     selected_task_list = args.tasks.split(",") if args.tasks else None
